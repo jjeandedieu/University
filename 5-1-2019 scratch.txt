@@ -1,0 +1,78 @@
+		            session.setAttribute("C_STUDENT", d);
+		            session.setAttribute("STUD_ID", studId);
+
+${updateLink}
+
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+
+            <img class="img-fluid" src="img/portfolio/student_personal_info.png" alt="Student Personal Info">
+
+${tempStudent.id}
+
+             <div class="newportfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="newportfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+
+
+      <!-- Contact Section -->
+  <!-- <section id="classes">
+    <div class="container">
+    <c:set var="name" value="${C_STUDENT}"/>
+      <h3 class="text-center text-uppercase text-secondary mb-0">Classes Attending this Semester</h3>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+    	<!--  <table align="center" cellpadding="12">
+   		   			   <tr>
+	    			<td><b>Class ID</b></td>
+	    			<td><b>Class Name</b></td>
+	    			<td><b>Class Time</b></td>
+	    			<td><b>Class Professor</b></td>
+	    			<td><b>Class Level</b></td>
+	    			<td><b>Seats Available</b></td>
+	    		</tr>
+	    		<tr>
+	    		<c:forEach var="tempClass" items="${CURRENT_STUD_CLASSES}">
+					<!--Display the list of classes-->
+					<!--<c:url var="tempLink" value="UniStudentsControllerServlet">
+						<c:param name="command" value="DROPCLASS" />
+						<c:param name="studentId" value="${tempStudent.id}"/>
+						<c:param name="classId" value="${tempClass.id}"/>
+					</c:url>
+					
+					<tr>
+						<td>${tempClass.id}</td>
+						<td>${tempClass.className}</td>
+						<td>${tempClass.classTime}</</td>
+						<td>${tempClass.professor}</</td>
+						<td>${tempClass.classLevel}</</td>
+						<td>${tempClass.seatsAvailable}</</td>
+						<td>
+							<a id="register" href="${tempLink}" class="btn btn-info" role="button">Drop Class</a>
+								
+						</td>
+
+					</tr>
+				</c:forEach>	
+	    		
+	    		</tr>
+    	
+    	</table>
+    	
+
+
+
+                <input list="grade" id="grade" name="grade" placeholder="Seniority" data-validation-required-message="Please enter your grade level." required>
+               	<datalist id="grade">
+               		<option value = "Freshman"></option>
+               		<option value="Sophmore"></option>
+               		<option value="Junor"></option>
+               		<option value="Senior"></option>
+               	</datalist>

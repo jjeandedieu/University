@@ -1,0 +1,145 @@
+   <h2 class="text-center text-uppercase text-secondary mb-0">Register As A Student</h2>
+      <hr class="star-dark mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form id="register" action="UniStudentsControllerServlet" method="GET"  novalidate="novalidate">
+            
+           <input type="hidden" name="command" value="ADD" />
+               <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+            
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>First Name</label>
+                <input class="form-control" id="firstname" name="firstname" type="text" placeholder="First Name" required="required" data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Last Name</label>
+                <input class="form-control" id="lastname" name="lastname" type="text" placeholder="Last Name" required="required" data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            
+                <label>Email Address</label>
+                <input class="form-control" id="email" name="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Phone Number</label>
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+              <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Address</label>
+                <input class="form-control" id="address" name="address" type="tel" placeholder="Address" required="required" data-validation-required-message="Please enter your address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Grade level</label>
+                <input type="text" list="grade" id="grade" class="form-control" name="grade" type="tel" placeholder="Grade Level" required="required" data-validation-required-message="Please enter your grade level.">
+               	<datalist id="grade">
+               		<option value = "Freshman"></option>
+               		<option value="Sophmore"></option>
+               		<option value="Junor"></option>
+               		<option value="Senior"></option>
+               	</datalist>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            </br>
+ 		     <h3 class="text-center text-uppercase text-secondary mb-0">Login Credentials</h3>
+              <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Username</label>
+                <input class="form-control" id="username" name="username" type="tel" placeholder="Username" required="required" data-validation-required-message="Please enter your username.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Password</label>
+                <input class="form-control" id="password" name="password" type="tel" placeholder="Password" required="required" data-validation-required-message="Please enter your password.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+                        
+        
+            <br>
+            <input type="submit" id="register" value="Register" />
+     <!--        
+            <div id="success"></div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-xl" id="register" value="Register" disabled="disabled"/>
+            </div>
+            -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+novalidate="novalidate"
+
+
+CURRENT_STUD_CLASSES
+
+
+
+		        if((d.getUsername() != null && d.getUsername().contains(request.getParameter("username"))) 
+		        		|| (d.getPassword() != null && d.getPassword().contains(request.getParameter("password")))) {
+		        	
+			        	if(d.getUsername().contains(request.getParameter("username"))) {
+							request.setAttribute("username_error", "exist");
+			        	}
+			        	
+			        	if(d.getPassword().contains(request.getParameter("password"))) {
+							request.setAttribute("password_error", "exist");
+			        	}
+		        	}
+
+
+
+		if(loginuse==="exist"){
+			alert("The Username Entered Already Exist")
+		}
+		else if(loginpass==="exist"){
+			alert("The Username Entered Already Exist")
+		}else{
+			alert("Both the username and password already exist")
+		
+		}
+
+
+
+
+ <%
+ String sorry = (String)request.getAttribute("C_SORRY");
+ String logout = (String)request.getAttribute("LOGOUT_Y");
+ String user_error = (String)request.getAttribute("username_error");
+ String pass_error = (String)request.getAttribute("password_error");
+ 
+%>
+
+  <servlet>
+    <servlet-name>accessFiles</servlet-name>
+    <servlet-class>yourclass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>accessFiles</servlet-name>
+    <url-pattern>/JSP/*</url-pattern>
+  </servlet-mapping>

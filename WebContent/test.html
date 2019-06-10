@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="form-popup" id="myForm">
+  <form action="UniStudentsControllerServlet" class="form-container" method="GET">
+  	<input type="hidden" name="command" value="LOGIN">
+    <h1>Login</h1>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<form>
+           <input type="hidden" name="command" value="ADD" />
+
+    Username<br />
+    <input type="text" id="user_input" name="username" /><br />
+    Password<br />
+    <input type="password" id="pass_input" name="password" /><br />
+    Confirm Password<br />
+    <input type="password" id="v_pass_input" name="v_password" /><br />
+    Email<br />
+    <input type="text" id="email" name="email" /><br />     
+    <input type="submit" id="register" value="Register" disabled="disabled" />
+</form>
+<div id="test">
+</div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+	<script src="js/general.js"></script>
+	
+		<script src="js/login.js"></script>
+	
+
+</body>
+
+</html>
